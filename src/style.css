@@ -448,6 +448,7 @@ body {
 .site .about {
   background: var(--surface);
   border-block: var(--bw) solid var(--border);
+  padding: 4.26rem 0;
 }
 
 .site .about__grid {
@@ -466,6 +467,30 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.site .about__image-wrap {
+  border: var(--bw) solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hard-lg);
+  background: var(--canvas-base);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 24rem;
+}
+
+.site .about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.site .about__image-wrap:hover .about__image {
+  transform: scale(1.03);
 }
 
 .site .about__badge {
@@ -566,28 +591,52 @@ body {
   border-radius: var(--radius-chip);
   background: var(--surface);
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 0.85rem 0.4rem 0.4rem;
+  gap: 0.75rem;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
   font-size: 0.9375rem;
+  font-weight: 500;
   display: inline-flex;
+  transition: border-color var(--t-fast), background var(--t-fast), transform var(--t-fast);
 }
 
 .site .s-tool:hover {
   border-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  transform: translateY(-1px);
 }
 
 .site .s-tool .tool-icon {
-  width: 28px;
-  height: 28px;
-  background: color-mix(in srgb, var(--accent) 24%, var(--surface));
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
   display: grid;
   place-items: center;
-  color: var(--ink);
   font-weight: 700;
   font-size: 0.75rem;
   flex: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.site .s-tool .tool-icon i {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site .s-tool .tool-icon i:not(.colored) {
+  color: #111111;
+}
+
+.site .s-tool .tool-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  stroke: #111111;
+  display: block;
 }
 
 .site .s-tool--text {
@@ -601,6 +650,7 @@ body {
   align-items: start;
   gap: clamp(2rem, 6vw, 5rem);
   display: grid;
+  padding: 4.26rem 0;
 }
 
 .site .xp__index {
@@ -787,6 +837,7 @@ body {
 .site .work {
   background: color-mix(in srgb, var(--ink) 4%, var(--surface));
   border-block: var(--bw) solid var(--border);
+  padding: 4.26rem 0;
 }
 
 .site .cases {
@@ -1249,7 +1300,8 @@ body {
   .site .about__grid {
     grid-template-columns: 1fr;
   }
-  .site .about__card {
+  .site .about__card,
+  .site .about__image-wrap {
     max-width: 24rem;
   }
   .site .xp__grid {

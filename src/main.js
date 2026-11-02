@@ -69,11 +69,19 @@ function renderSkills() {
         return `<span class="s-tool s-tool--text">${item.name}</span>`;
       }
 
-      // Generate a clean monogram/symbol badge for core technologies
-      const initials = item.name.substring(0, 2).toUpperCase();
+      let iconHtml = '';
+      if (item.iconClass) {
+        iconHtml = `<i class="${item.iconClass}" aria-hidden="true"></i>`;
+      } else if (item.iconCustomSvg) {
+        iconHtml = item.iconCustomSvg;
+      } else {
+        const initials = item.name.substring(0, 2).toUpperCase();
+        iconHtml = initials;
+      }
+
       return `
         <span class="s-tool">
-          <span class="tool-icon" aria-hidden="true">${initials}</span>
+          <span class="tool-icon" aria-hidden="true">${iconHtml}</span>
           <span>${item.name}</span>
         </span>
       `;

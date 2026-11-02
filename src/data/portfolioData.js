@@ -57,11 +57,11 @@ export const portfolioData = {
     {
       category: "Languages",
       items: [
-        { name: "Python", type: "core" },
-        { name: "PHP", type: "core" },
-        { name: "JavaScript (ES6+)", type: "core" },
-        { name: "HTML5", type: "standard" },
-        { name: "CSS3", type: "standard" },
+        { name: "Python", type: "core", iconClass: "devicon-python-plain colored" },
+        { name: "PHP", type: "core", iconClass: "devicon-php-plain colored" },
+        { name: "JavaScript (ES6+)", type: "core", iconClass: "devicon-javascript-plain colored" },
+        { name: "HTML5", type: "standard", iconClass: "devicon-html5-plain colored" },
+        { name: "CSS3", type: "standard", iconClass: "devicon-css3-plain colored" },
         { name: "Responsive Design", type: "text" },
         { name: "DOM Manipulation", type: "text" }
       ]
@@ -69,8 +69,8 @@ export const portfolioData = {
     {
       category: "Backend & Architecture",
       items: [
-        { name: "FastAPI", type: "core" },
-        { name: "Laravel", type: "core" },
+        { name: "FastAPI", type: "core", iconClass: "devicon-fastapi-plain colored" },
+        { name: "Laravel", type: "core", iconClass: "devicon-laravel-original colored" },
         { name: "RESTful API Design", type: "text" },
         { name: "MVC Architecture", type: "text" },
         { name: "Object-Oriented Programming (OOP)", type: "text" },
@@ -80,12 +80,12 @@ export const portfolioData = {
     {
       category: "Databases & Data",
       items: [
-        { name: "PostgreSQL", type: "core" },
-        { name: "MySQL", type: "core" },
-        { name: "SQLite", type: "standard" },
-        { name: "SQLAlchemy", type: "standard" },
-        { name: "Alembic", type: "standard" },
-        { name: "Eloquent ORM", type: "standard" },
+        { name: "PostgreSQL", type: "core", iconClass: "devicon-postgresql-plain colored" },
+        { name: "MySQL", type: "core", iconClass: "devicon-mysql-original colored" },
+        { name: "SQLite", type: "standard", iconClass: "devicon-sqlite-plain colored" },
+        { name: "SQLAlchemy", type: "standard", iconClass: "devicon-sqlalchemy-plain colored" },
+        { name: "Alembic", type: "standard", iconCustomSvg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.1 19.5A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.5L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="6.8" y1="15" x2="17.2" y2="15"/></svg>' },
+        { name: "Eloquent ORM", type: "standard", iconClass: "devicon-laravel-plain" },
         { name: "Relational Schema Migrations", type: "text" },
         { name: "JSON Data Schemas", type: "text" }
       ]
@@ -93,15 +93,15 @@ export const portfolioData = {
     {
       category: "Frontend Styling",
       items: [
-        { name: "Tailwind CSS", type: "standard" },
-        { name: "Bootstrap", type: "standard" }
+        { name: "Tailwind CSS", type: "standard", iconClass: "devicon-tailwindcss-original colored" },
+        { name: "Bootstrap", type: "standard", iconClass: "devicon-bootstrap-plain colored" }
       ]
     },
     {
       category: "Integrations & Delivery",
       items: [
-        { name: "Paystack", type: "standard" },
-        { name: "Monnify", type: "standard" },
+        { name: "Paystack", type: "standard", iconCustomSvg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h12M4 18h8"/></svg>' },
+        { name: "Monnify", type: "standard", iconCustomSvg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 10h20"/></svg>' },
         { name: "Webhooks", type: "text" },
         { name: "Application Deployment", type: "text" },
         { name: "CI/CD Pipelines", type: "text" }
@@ -110,9 +110,9 @@ export const portfolioData = {
     {
       category: "Tools & Practices",
       items: [
-        { name: "Git & GitHub", type: "standard" },
-        { name: "Postman", type: "standard" },
-        { name: "Linux Environment", type: "standard" },
+        { name: "Git & GitHub", type: "standard", iconClass: "devicon-git-plain colored" },
+        { name: "Postman", type: "standard", iconClass: "devicon-postman-plain colored" },
+        { name: "Linux Environment", type: "standard", iconClass: "devicon-linux-plain" },
         { name: "Unit Testing", type: "text" },
         { name: "Agile/Scrum Workflow", type: "text" },
         { name: "System Debugging", type: "text" },
